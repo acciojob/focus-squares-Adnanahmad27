@@ -31,16 +31,29 @@ for(let i=0 ; i<3 ; i++){
 }
 function onMouse(e){
     for(let j=0 ; j<3 ; j++){
-        squares[j].classList.remove('lavender');
-        squares[j].classList.add('coffee');
+        if(e.target !== squares[j]){
+            squares[j].style.backgroundColor = '#6F4E37';  // Coffee color
+        }
     }
-    e.target.classList.remove('coffee');
-    e.target.classList.add('lavender');
 }
 
 function offMouse(e){
     for(let j=0 ; j<3 ; j++){
-        squares[j].classList.remove('coffee');
-        squares[j].classList.add('lavender');
+        squares[j].style.backgroundColor = '#E6E6FA';  // Lavender color
     }
 }
+// function onMouse(e){
+//     for(let j=0 ; j<3 ; j++){
+//         squares[j].classList.remove('lavender');
+//         squares[j].classList.add('coffee');
+//     }
+//     e.target.classList.remove('coffee');
+//     e.target.classList.add('lavender');
+// }
+
+// function offMouse(e){
+//     for(let j=0 ; j<3 ; j++){
+//         squares[j].classList.remove('coffee');
+//         squares[j].classList.add('lavender');
+//     }
+// }
