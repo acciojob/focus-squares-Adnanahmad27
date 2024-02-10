@@ -1,7 +1,14 @@
 /*  your css code here. If applicable */
-.coffee{
+/* .coffee{
 	background-color:#6F4E37;
 }
 .lavender{
 	background-color: #E6E6FA;
+} */
+.coffee {
+  background-color: rgb(111, 78, 55);
+}
+
+.lavender {
+  background-color: rgb(230, 230, 250);
 }
