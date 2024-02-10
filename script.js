@@ -11,17 +11,32 @@ function toggleBgColor(e){
 	e.classList.toggle("coffee");
 	e.classList.toggle("lavender");
 }
+// function onMouse(e){
+// 	for(let j=0 ; j<3 ; j++){
+// 		if(e.target!==squares[j]){
+// 			toggleBgColor(squares[j]);
+// 		}
+// 	}
+// }
+// function offMouse(e){
+// 	for(let j=0 ; j<3 ; j++){		
+// 		if(e.target!==squares[j]){
+// 			toggleBgColor(squares[j]);
+// 		}
+// 	}
+// }
 function onMouse(e){
-	for(let j=0 ; j<3 ; j++){
-		if(e.target!==squares[j]){
-			toggleBgColor(squares[j]);
-		}
-	}
+    for(let j=0 ; j<3 ; j++){
+        squares[j].classList.remove('lavender');
+        squares[j].classList.add('coffee');
+    }
+    e.target.classList.remove('coffee');
+    e.target.classList.add('lavender');
 }
+
 function offMouse(e){
-	for(let j=0 ; j<3 ; j++){		
-		if(e.target!==squares[j]){
-			toggleBgColor(squares[j]);
-		}
-	}
+    for(let j=0 ; j<3 ; j++){
+        squares[j].classList.remove('coffee');
+        squares[j].classList.add('lavender');
+    }
 }
